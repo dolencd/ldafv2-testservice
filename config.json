@@ -1,0 +1,55 @@
+{
+    "name": "testservice",
+    "plugins": [
+        {
+            "name": "protobuf",
+            "src_npm": "@ldafv2/plugin-protobuf",
+            "config": {
+                "protoFiles": [
+                    "./main.proto"
+                ]
+            }
+        }
+    ],
+    "methods": [
+        {
+            "name": "handleMessage",
+            "type": "default",
+            "pluginConfig": {
+                "protobuf":{
+                    "inputSchema": "handleMessage",
+                    "outputSchema": "handleMessage"
+                }
+            } 
+        },
+        {
+            "name": "add",
+            "type": "default",
+            "pluginConfig": {
+                "protobuf":{
+                    "inputSchema": "simpleNumber",
+                    "outputSchema": "simpleNumber"
+                }
+            } 
+        },
+        {
+            "name": "hashData",
+            "type": "default",
+            "pluginConfig": {
+                "protobuf":{
+                    "inputSchema": "hashDataRequest",
+                    "outputSchema": "hashDataResponse"
+                }
+            } 
+        },
+        {
+            "name": "updateValue",
+            "type": "noRes",
+            "pluginConfig": {
+                "protobuf":{
+                    "inputSchema": "simpleNumber"
+                }
+            } 
+        }
+    ]
+}

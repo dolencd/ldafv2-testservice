@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message handleMessage {
+    uint32 returnNumber = 1;
+    uint32 deltaTime = 2;
+}
+
+message simpleNumber {
+    uint32 value = 1;
+}
+
+message hashDataRequest {
+    string data = 1;
+    sint32 repetitions = 2;
+}
+
+message hashDataResponse {
+    string hash = 1;
+}
