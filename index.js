@@ -7,7 +7,7 @@ const handleMessage = (event, context, callback) => {
     const deltaTime = context.time ? newTime - context.time : 0;
     context.time = newTime;
     callback(context, {
-        returnNumber: event.params.returnNumber,
+        returnNumber: event.params.returnNumber ? event.params.returnNumber : 0,
         deltaTime
     })
 }
